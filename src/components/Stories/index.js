@@ -65,6 +65,7 @@ const Stories = () => {
       renderItem={({item}) => (
         <Story name={item.name} imageUri={item.imageUri} />
       )}
+      style={styles.container}
     />
   );
 };

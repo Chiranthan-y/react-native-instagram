@@ -1,14 +1,14 @@
 import React from 'react';
 import {Text, Image, View} from 'react-native';
 import styles from './styles';
-const ProfilePicture = ({uri}) => {
+const ProfilePicture = ({uri, size = 70}) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {width: size + 6, height: size + 6}]}>
       <Image
         source={{
           uri: uri,
         }}
-        style={styles.image}
+        style={[styles.image, {width: size, height: size}]}
       />
     </View>
   );

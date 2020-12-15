@@ -5,12 +5,16 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Body from './components/Body';
 
-const Post = ({post: {user}}) => {
+const Post = ({post}) => {
   return (
     <View>
-      <Header imageUri={user.imageUri} name={user.name} />
-      <Body />
-      <Footer />
+      <Header imageUri={post.user.imageUri} name={post.user.name} />
+      <Body imageUri={post.imageUri} />
+      <Footer
+        likesCount={post.likesCount}
+        caption={post.caption}
+        timeStamp={post.timeStamp}
+      />
     </View>
   );
 };
