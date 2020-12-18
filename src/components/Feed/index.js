@@ -5,6 +5,7 @@ import Stories from '../Stories';
 
 const post = [
   {
+    id: '1',
     user: {
       imageUri:
         'https://cmsimages.tribuneindia.com/gallary_content/2020/8/2020_8$largeimg_1307977845.JPG',
@@ -17,6 +18,7 @@ const post = [
     timeStamp: '4 minutes ago',
   },
   {
+    id: '2',
     user: {
       imageUri:
         'https://cmsimages.tribuneindia.com/gallary_content/2020/8/2020_8$largeimg_1307977845.JPG',
@@ -29,6 +31,7 @@ const post = [
     timeStamp: '4 minutes ago',
   },
   {
+    id: '3',
     user: {
       imageUri:
         'https://cmsimages.tribuneindia.com/gallary_content/2020/8/2020_8$largeimg_1307977845.JPG',
@@ -41,6 +44,7 @@ const post = [
     timeStamp: '4 minutes ago',
   },
   {
+    id: '4',
     user: {
       imageUri:
         'https://cmsimages.tribuneindia.com/gallary_content/2020/8/2020_8$largeimg_1307977845.JPG',
@@ -60,6 +64,7 @@ const Feed = () => {
       data={post}
       renderItem={({item}) => <Post post={item} />}
       ListHeaderComponent={Stories}
+      keyExtractor={({id}) => id}
     />
   );
 };

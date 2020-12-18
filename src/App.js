@@ -1,22 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+import 'react-native-gesture-handler';
 import React from 'react';
-import {StatusBar, SafeAreaView} from 'react-native';
-import HomeScreen from './screeens/HomeScreen';
+import {StatusBar} from 'react-native';
+
+import {NavigationContainer} from '@react-navigation/native';
+import Router from './routes';
 const App = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <HomeScreen />
-      </SafeAreaView>
-    </>
+    <NavigationContainer>
+      <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+      <Router />
+    </NavigationContainer>
   );
 };
 
