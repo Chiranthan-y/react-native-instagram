@@ -1,14 +1,23 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import ProfilePicture from './../ProfilePicture';
 import styles from './styles';
-const Story = ({imageUri, name}) => {
+
+const Story = ({story}) => {
+  const {user, stories} = story;
+  const navigation = useNavigation();
+  const handlePress = () => {
+    navigation.navigate('Story', {userId: user.id});
+  };
   return (
     <>
-      <View style={styles.container}>
-        <ProfilePicture uri={imageUri} />
-        <Text style={styles.text}>{name}</Text>
-      </View>
+      <TouchableOpacity style={styles.container} onPress={handlePress}>
+        <View>
+          <ProfilePicture uri={user.imageUri} />
+          <Text style={styles.text}>{user.name}</Text>
+        </View>
+      </TouchableOpacity>
     </>
   );
 };

@@ -24,7 +24,7 @@ const Footer = ({likesCount, caption, timeStamp}) => {
         <View style={styles.left}>
           <TouchableWithoutFeedback onPress={handleLikePress}>
             {isLike ? (
-              <Icon name="heart" size={35} style={styles.icon} />
+              <Icon name="heart" size={35} style={styles.iconActive} />
             ) : (
               <Icon name="heart-outline" size={35} style={styles.icon} />
             )}

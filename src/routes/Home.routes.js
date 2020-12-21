@@ -3,10 +3,10 @@ import {Image} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import logo from './../../assets/image/Logo.png';
+import logo from './../assets/image/Logo.png';
 
-import HomeScreen from './../../screeens/HomeScreen';
-
+import HomeScreen from '../screeens/HomeScreen';
+import StoryScreen from './../screeens/StoryScreen';
 const HomeStack = createStackNavigator();
 
 const HomeStackScreen = () => {

@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
     margin: 5,
     color: 'grey',
   },
+  iconActive: {
+    margin: 5,
+    color: 'red',
+  },
   likes: {
     fontWeight: 'bold',
     margin: 3,
